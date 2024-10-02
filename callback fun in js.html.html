@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+function calculate(num1, num2, callback) {
+    return callback(num1, num2);
+}
+
+const add = (a, b) => a + b;
+const subtract = (a, b) => a - b;
+const multiply = (a, b) => a * b;
+const divide = (a, b) => b !== 0 ? a / b : 'Error: Division by zero';
+const modulus = (a, b) => b !== 0 ? a % b : 'Error: Division by zero';
+
+
+const num1 = 10;
+const num2 = 3;
+
+console.log("Addition:", calculate(num1, num2, add));          
+console.log("Subtraction:", calculate(num1, num2, subtract)); 
+console.log("Multiplication:", calculate(num1, num2, multiply)); 
+console.log("Division:", calculate(num1, num2, divide));       
+console.log("Modulus:", calculate(num1, num2, modulus));      
+
+    </script>
+</body>
+</html>
